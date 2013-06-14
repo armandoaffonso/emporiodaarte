@@ -1,0 +1,449 @@
+
+
+#home_carousel{
+display: inline-block;
+float: left;
+width: 100%;
+height: 250px;
+margin: 25px 0px 0px 0px;
+}
+
+#home_carousel .jcarousel_container{
+border-left: none;
+border-bottom: 1px solid #e1e1e1;
+background: #fff;
+width: 960px;
+height: 250px;
+display: inline-block;
+margin: 0px!important;
+padding: 0px!important;
+box-shadow: 0px 1px 3px #e9e9e9;
+-webkit-box-shadow: 0px 1px 3px #e9e9e9;
+-moz-box-shadow: 0px 1px 3px #e9e9e9;
+}
+
+.jcarousel_container_title{
+background: url("../images/car_bg.png");
+background-color: #f14d4d;
+display: inline-block;
+float: left;
+width: 960px;
+height: 35px;
+margin: 0 0px 0 0;
+border-radius: 1px 1px 0 0;
+}
+
+.jcarousel_container_title h1{
+background: url("../images/car_bg_title.png") repeat-x bottom;
+background-color: #f14d4d;
+display: inline-block;
+margin: 6px 0 0 10px;
+padding-right: 10px;
+float: left;
+line-height: 24px;
+font-size: 13px;
+color: #fff;
+text-transform: uppercase;
+}
+
+.jcarousel_container_title span{
+display: block;
+height: 20px;
+width: 93%;
+background: url("../images/car_header_bg.png") repeat-x;
+margin: 13px 0 0 12px;
+}
+
+#home_carousel .jcarousel-skin-tango .jcarousel-next-horizontal {
+border: 1px solid #eee;
+position: absolute;
+top: -27px;
+right: 8px;
+width: 17px;
+height: 17px;
+cursor: pointer;
+background: transparent url(../images/car_next.png) no-repeat 0 0;
+}
+
+#home_carousel .jcarousel-skin-tango .jcarousel-prev-horizontal {
+border: 1px solid #eee;
+position: absolute;
+top: -27px;
+right: 28px;
+width: 17px;
+height: 17px;
+cursor: pointer;
+background: transparent url(../images/car_prev.png) no-repeat 0 0;
+}
+
+#home_carousel  .jcarousel-skin-tango {
+display: inline-block;
+float: right;
+width: 960px;
+height: 200px;
+margin: 0px!important;
+padding: 0px!important;
+}
+
+#home_carousel  .jcarousel_container .jcarousel-skin-tango {
+height: 200px;
+}
+
+#home_carousel .jcarousel-skin-tango .jcarousel-container {
+display: inline-block;
+height: 200px!important;
+min-height: 200px!important;
+margin: 0px;
+width: 100%;
+}
+
+#home_carousel .jcarousel-skin-tango .jcarousel-container-horizontal {
+display: inline-block;
+width: 100%;
+height: 200px;
+}
+
+#home_carousel  .jcarousel_container .jcarousel-skin-tango .jcarousel-item {
+width: 217px;
+height: 190px;
+display: inline-block;
+vertical-align: top;
+margin: 12px 7px 0 14px;
+padding: 0px;
+}
+
+#home_carousel  .jcarousel_container .jcarousel-skin-tango .jcarousel-item:last-child {
+border-right: none;
+}
+
+#home_carousel .carousel_post {
+display: inline-block;
+width: 217px;
+height: 190px;
+float: left;
+}
+
+#home_carousel .carousel_post .post_rating{
+background-color: #f14d4d;
+margin: 5px 0px 0px 5px;
+}
+
+.gecko #home_carousel .carousel_post .post_rating{
+margin: 5px 0px 0px -212px;
+}
+
+#home_carousel .carousel_post .post_format_box{
+background-color: #f14d4d;
+margin: 5px 0px 0px -29px; 
+}
+
+#home_carousel .jcarousel-skin-tango .carousel_post img{
+border: none;
+padding: 0px;
+display: inline-block;
+float: left;
+width: 217px!important;
+height: 190px!important;
+}
+
+.jcarousel-skin-tango .carousel_post h1 a{
+background: url("../images/car_image_title_bg.png");
+background-color: #f14d4d;
+position: absolute;
+display: block;
+max-width: 186px;
+margin: 145px 0px 0 8px;
+font-size: 13px;
+padding: 4px 5px;
+font-weight: normal;
+color: #fff;
+line-height: 18px;
+}
+
+.jcarousel-skin-tango .carousel_post h1 a:hover{
+text-shadow: 0px 0px 3px #bbb;
+}
+
+.carousel_post_date {
+border-bottom: none;
+display: block;
+width: 100%;
+color: #888;
+line-height: 17px;
+font-size: 11px;
+padding: 0px 0 0px 110px;
+margin: 3px 0 0px 0px;
+}
+
+
+
+/*------------Carousel-----------*/
+
+.jcarousel_container{
+border-left: 3px solid #f14d4d;
+border-bottom: 1px solid #e1e1e1;
+background: #fff;
+width: 100%;
+margin: 0px 0 27px 0;
+box-shadow: 0px 1px 3px #e1e1e1;
+-webkit-box-shadow: 0px 1px 3px #e1e1e1;
+-moz-box-shadow: 0px 1px 3px #e1e1e1;
+}
+
+.jcarousel_container iframe{
+display: inline-block;
+margin: 0px 0 10px 0;
+}
+
+.jcarousel_container .home_posts_title{
+margin: 0px 0px 0px 0px;
+}
+
+.jcarousel_container .home_posts_title span{
+width: 91%;
+}
+
+.jcarousel-skin-tango .jcarousel-container {
+display: inline-block;
+min-height: 155px;
+margin: 15px 0 15px 0;
+width: 100%;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+width: 100%;
+min-height: 155px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip {
+overflow: hidden;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+min-height: 160px;
+width: 100%;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+width: 213px;
+display: inline-block;
+margin-right: 20px;
+padding: 5px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+background: #fff;
+color: #000;
+}
+
+
+
+/*------Carousel posts-----*/
+
+
+.jcarousel_container .jcarousel-skin-tango .jcarousel-item {
+width: 200px;
+display: inline-block;
+margin: 0px 1px 0px 13px;
+padding: 0px;
+}
+
+.jcarousel-skin-tango .post_three_column{
+border: none;
+display: inline-block;
+overflow: hidden;
+width: 195px;
+margin: 0px 0px 3px 0px;
+padding: 0px;
+vertical-align: top;
+height: auto;
+float: left;
+}
+
+.jcarousel-skin-tango .post_three_column img{
+width: 195px!important;
+height: 190px!important;
+padding: 0px!important;
+margin: 0px!important;
+}
+
+.jcarousel-skin-tango .post_three_column .post_rating{
+background-color: #f14d4d;
+margin: 5px 0px 0px 5px;
+}
+
+.jcarousel-skin-tango .post_three_column .post_format_box{
+background-color: #f14d4d;
+margin: 5px 0px 0px -32px; 
+}
+
+.chrome .jcarousel-skin-tango .post_three_column .post_format_box{
+position: absolute;
+display: block!important;
+margin: -185px 0px 0px 167px!important;
+}
+
+.gecko .jcarousel-skin-tango .post_three_column .post_format_box{
+position: absolute;
+display: block!important;
+margin: -190px 0px 0px 167px!important;
+}
+
+.jcarousel-skin-tango .post_three_column h1 a{
+background: url("../images/car_image_title_bg.png");
+background-color: #f14d4d;
+position: absolute;
+display: block;
+max-width: 170px;
+margin: -55px 0px 0 8px;
+font-size: 13px;
+padding: 4px 5px;
+font-weight: normal;
+color: #fff;
+line-height: 18px;
+}
+
+.jcarousel-skin-tango .post_three_column h1 a:hover{
+text-shadow: 0px 0px 3px #bbb;
+}
+
+
+
+/*------Carousel Buttons-----*/
+
+
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+border: 1px solid #eee;
+    position: absolute;
+    top: -34px;
+    right: 9px;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    background: transparent url(../images/car_next_dark.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-horizontal:focus {
+    opacity: 0.9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {
+       opacity: 0.9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:focus,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+   opacity: 0.8;
+   	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+border: 1px solid #eee;
+    position: absolute;
+    top: -34px;
+    right: 30px;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    background: transparent url(../images/car_prev_dark.png) no-repeat 0 0;
+}
+
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover, 
+.jcarousel-skin-tango .jcarousel-prev-horizontal:focus {
+   opacity: 0.9;
+   	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {
+   opacity: 0.9;
+   	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:focus,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+   opacity: 0.8;
+   	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+
+
+
+
+/*------Content carousel-----*/
+
+
+.slidewrap{
+display: inline-block;
+margin: 5px 0 0 0;
+}
+
+.slidecontrols{
+display: inline-block;
+float: right; 
+margin: 0 5px 20px 0;
+width: 55px;
+}
+
+.car_title{
+display: inline-block;
+float: left; 
+margin: -2px 0 0 0;
+}
+
+.car_slide{
+display: inline-block;
+position: relative;
+padding: 0px;
+}
+
+.car_slide p{
+text-indent: 0px;
+}
+
+.car_next{
+display: inline-block;
+width: 17px;
+height: 17px;
+float: right; 
+cursor: pointer;
+background: transparent url(../images/car_next.png) no-repeat 0 0!important;
+}
+
+.car_prev{
+display: inline-block;
+width: 17px;
+height: 17px;
+float: left; 
+cursor: pointer;
+background: transparent url(../images/car_prev.png) no-repeat 0 0!important;
+}
+
+.car_next:hover, .car_prev:hover { 
+opacity: 0.8;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}	
+
+.carousel-active-tab { 
+opacity: 1;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}	
+
+.carousel-disabled,
+.mr-rotato-disabled { 
+opacity: 0.6!important;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+
+
+
+

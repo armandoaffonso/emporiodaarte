@@ -1,0 +1,42 @@
+
+.ui-autocomplete {
+position: absolute;
+top: 0;
+left: 0;
+outline: none; 
+border-radius: 0px;
+}
+
+.ui-menu { 
+border: none!important; 
+width: 220px;
+list-style:none; 
+font-size: 13px;
+padding: 2px!important; 
+margin: 0px; 
+display:block; 
+outline: none; 
+border-radius: 0px!important; 
+box-shadow: 1px 1px 5px #999;
+}
+
+.ui-menu .ui-menu-item a { 
+border-top: 1px solid #666;
+border-bottom: 1px solid #222;
+background: #444;
+text-decoration: none; 
+padding: 4px 7px!important; 
+display: block; 
+font-size: 13px;
+color: #fff;
+line-height: 27px; 
+zoom: 1; 
+font-weight: normal; 
+cursor: pointer;
+border-radius: 0px;
+}
+
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active { 
+background: #f14d4d;
+}

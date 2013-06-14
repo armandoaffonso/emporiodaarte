@@ -1,0 +1,2 @@
+[06-Apr-2013 21:39:05] Erro na base de dados do WordPress Duplicate key name 'pollip_ip' na query ALTER TABLE wp_pollsip ADD INDEX pollip_ip (pollip_id); feita por activate_plugin, do_action('activate_wp-polls/wp-polls.php'), call_user_func_array, create_poll_table
+[06-Apr-2013 21:39:05] Erro na base de dados do WordPress Duplicate key name 'pollip_qid' na query ALTER TABLE wp_pollsip ADD INDEX pollip_qid (pollip_qid); feita por activate_plugin, do_action('activate_wp-polls/wp-polls.php'), call_user_func_array, create_poll_table

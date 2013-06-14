@@ -1,0 +1,129 @@
+
+
+
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    top: -30px!important;
+    right: 8px;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    top: -30px!important;
+    right: 34px;
+}
+
+#home_carousel .jcarousel-skin-tango .jcarousel-next-horizontal {
+top: -26px!important;
+}
+
+#home_carousel .jcarousel-skin-tango .jcarousel-prev-horizontal {
+top: -26px!important;
+}
+
+#home_carousel .jcarousel-skin-tango .jcarousel-container {
+margin: 0px!important;
+}
+
+.jcarousel-skin-tango .jcarousel-container {
+margin: 5px 0 15px 0!important;
+}
+
+.flex-control-nav {
+bottom: 0px!important;
+}
+
+
+.home_posts_container_two_column .home_posts_two_first .post_format_box{
+margin: 5px 0px 0px -29px!important;
+}
+
+.home_posts_container_two_column .home_posts_two_simple_first .post_format_box{
+margin: 5px 0px 0px -29px!important;
+}
+
+
+.jcarousel-skin-tango .post_three_column .post_format_box{
+margin: 5px 0px 0px -29px!important;
+}
+
+.home_posts_pictures .post_format_box{
+margin: 5px 0px 0px -29px!important;
+}
+
+.jcarousel_container .jcarousel-skin-tango {
+margin-top: 11px!important;
+}
+
+
+.galleria-stage img{
+position: absolute;
+display: inline-block;
+top: 25px!important;
+left: 0px!important;
+}
+
+#dropdown_cats select {
+border: 1px solid #ddd;
+padding: 0px 0px 0px 1px!important;
+}
+
+#dropdown_tags {
+border: 1px solid #ddd;
+padding: 0px 0px 0px 1px!important;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 978px){
+
+#mainMenu ul li a {
+display:block;
+height: 29px;
+color: #fff;
+padding: 16px 11px 0 11px;
+font-size: 10px;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+.galleria-container img {
+height: 70%!important;
+max-width: 300px!important;
+padding: 0px;
+margin: 0px!important;
+}
+
+.galleria-stage img{
+position: absolute;
+display: inline-block;
+top: 0px!important;
+left: 60px!important;
+}
+
+
+}
+
+@media screen and (min-width: 480px) and (max-width:767px) {
+
+
+.galleria-container img {
+height: 30%!important;
+display: inline-block;
+max-width: 230px!important;
+padding: 0px;
+}
+
+.galleria-stage img{
+position: absolute;
+display: inline-block;
+top: 0px!important;
+left: 22px!important;
+}
+
+}
+
+@media only screen and (max-width: 479px) {
+.galleria-stage img {
+display: block;
+top: 0px!important;
+left: 0px!important;
+}
+}

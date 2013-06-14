@@ -1,0 +1,443 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Replete Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<link rel="stylesheet" href="assets/blueprint-css/image.css" type="text/css">
+	<link rel="stylesheet" href="assets/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />	
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+	<script type='text/javascript' src='assets/js/jquery.js'></script>
+	<script src="assets/js/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>	
+	<script type='text/javascript' src='assets/js/custom.js'></script>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;<span class="center">Replete WordPress Theme</span>&rdquo; Documentation by &ldquo;Kriesi&rdquo; v1.0</h3>
+		
+		<hr/>
+<h1 class="center">&ldquo;Replete WordPress Theme&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 26/11/2012<br>
+					By: Christian "Kriesi" Budschedl<br>
+					Email: <a href="http://themeforest.net/user/Kriesi#from">Kriesi</a>
+					</strong>				</p>
+				<p class="prepend-top"><span class="small">Informations about Updates and New Themes are always announced on Twitter and Facebook. Twitter updates are usually more up to date, Facebook updates are more detailed and easier to follow :)</span><br/>
+					<br/>
+					<a href="http://twitter.com/kriesi"><img src="assets/images/twitter.png" width="212" height="65"></a><br/>
+					<a href="http://www.facebook.com/pages/Kriesi/333648177216"><img src="assets/images/facebook.jpg" width="212" height="65"></a><br/>
+					<br/>
+				</p>
+</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0"><strong>Hello! First of all I would like to thank you for purchasing my theme! :) </strong><br>
+				If you have any questions that are beyond the scope of this help file, please feel free to ask your question at the  support forum at <a href="http://www.kriesi.at/support/">http://www.kriesi.at/support/</a>. </p>
+				<p class="prepend-top append-0">This file will teach you how to set up and use the “Replete”  WordPress Theme. <br>
+					This file is really extensive so you might think the theme is hard to use, <br>
+					actually its not, you probably just might jump to the options page and explore everything yourself, this file is more of a reference work if you do not know what to do, or if you are not familiar to WordPress.</p>
+				<!--<p class="prepend-top append-0">In addition to this file I recorded several screencasts that might help you to setup and install the theme. Since English ain't my first	language	I	appologize upfront for my bad grammar and  pronunciation :)</p>-->
+				<p class="prepend-top append-0">Have fun with your new theme! best regards<br>
+				<strong>Kriesi</strong></p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr/>
+<div class='toc'>
+<h2 id="toc" class="alt">Table of Contents</h2>
+<ol class="alpha">
+		<li><a href="#folderStructure">Folder Structure</a></li>
+        <li><a href='#before_start"'>Before you start</a></li>
+		<li><a href="#installation">Installation</a></li>
+		<li>
+		  <ol>
+		    <li><a href="#b1">Setting up the Theme Options</a></li>
+		    <li><a href="#b2">Setting up  Styling</a></li>
+		    <li><a href="#layout">Setting up layout &amp; settings</a></li>
+		    <li><a href="#b3">Setting up your Footer</a></li>
+				<li><a href="#b4"> Setting up the general Portfolio options</a></li>
+		    <li><a href="#b5">Setting up the Contact form</a></li>
+		    <li><a href="#b6">Setting up the Sidebar</a></li>
+		    <li><a href="#b7">Setting up the Menus and Mega Menus on your site</a></li>
+		    <li><a href="#b8">Using custom Widgets<br></a></li>
+		    <li><a href="#b9">Adding Blog, Page and Portfolio (how to create  entries and use preview images)</a></li>
+		    <li><a href="#b10">The power of shortcodes</a></li>
+		    <li><a href="#template_builder">Building your own dynamic Templates</a></li>
+		    <li><a href="woocommerce.html">Woocommerce Documentation</a></li>
+		    </ol>
+	  </li>
+	<li><a href="#htmlStructure">HTML Structure</a></li>
+	<li><a href="#cssFiles">CSS Files and Structure</a></li>
+	<li><a href="#javascript">JavaScript</a></li>
+	<li><a href="#psdFiles">PSD Files</a></li>
+	<li><a href="#imagesize">Image Sizes</a></li>
+	<li><a href="#credits">Sources and Credits</a></li>
+</ol>
+</div>
+<hr/>
+<div class='real_content'>
+<h3 id="folderStructure"><strong>Folder Structure of Replete and the Avia Framework</strong> - <a href="#toc">top</a></h3>
+        <p>The Theme is built with WordPress best practices in mind, therefore it makes heavy use of the WordPress template engine. What exactly does that mean?</p>
+        <p>Whenever you see a php function call like this within your php files (get_template_part(), get_header(), get_footer() or get_sidebar() ) the theme retrieves a reusable code snippet, most of the time a chunk of code that is used in many different files.</p>
+        <ul>
+        	<li>This approach has the benefit that you can edit a single code snippet and the changes will effect many page templates</li>
+            <li>Its still easy to only change a single page template since you can simply include a modified copy of the snippet instead of the original one</li>
+            <li>Last but not least it makes the folder structure clear and tidy</li>
+        </ul>
+      <p>Apart from the php structure the theme uses a lot of modern CSS3 features, most notably the power of media queries to serve different layouts for different viewport sizes. If you use a modern browser (IE9 +, Chrome, Safari, Firefox) and resize your browser window you will realize that the theme adapts its size to the viewport.</p>
+    <h4>Folder structure:</h4>
+		<ul>
+		<li>Replete →  all PHP template files needed to run the WordPress theme as well as the main stylesheet (style.css)</li>
+		<li>JS → Custom Javascript files, the prettyPhoto Lightbox clone and the jQuery library</li>
+		<li>CSS →  Multiple stylesheets:
+		  <ul>
+		    <li>'css/grid.css - loads the default grid with all widths for the different screens</li>
+		    <li> css/base.css- loads the css reset &amp; default styling for html elements like &lt;a&gt;, &lt;ul&gt;, &lt;li&gt;, and some wordpress generated classes (eg galleries)<br>
+	        </li>
+		    <li>css/layout.css - theme layout for the default screen size and media queries for smaller screen estates</li>
+		    <li>css/slideshow.css- theme layout for the various slideshows</li>
+		    <li>css/shortcodes.css - loads the css rules for the theme shortcodes</li>
+		    <li>css/dynamic-css.php - a php file that holds all color informations entered within the backend. it is recommended to not edit this file and instead use the custom.css file</li>
+		    <li>css/custom.css - stylesheet dedicated for user customizations</li></ul>
+		</li>
+		<li>Images
+		  <ul>
+		    <li>Layout Images, Icons folder etc </li>
+	      </ul>
+		  </li>
+		<li>Framework → The theme is built on top of my very own "Avia Framework". All framework files are located in this folder. Modification of the framework is not recommended</li>
+		<li>Includes → Lots of small code snippets and functions that were mentioned before that make the theme flexible and easy to edit
+		  <ul>
+		    <li>admin →mostly configuration files for the admin panel. also holds some registration functions for custom post types and dynamic styles	        </li>
+	      </ul>
+		</li>
+		<li>config-woocommer: contains the configuration file to seemlesly integrate the woocommerce shop plugin into the theme. You need to install the <a href="http://wordpress.org/extend/plugins/woocommerce/">woocommerce plugin </a>manually to activate the shop functions</li>
+		<li>config.bbpress: contains the configuration file to integrate the bbpress forum into the theme. you need to install the <a href="http://wordpress.org/extend/plugins/bbpress/">bbpress forum software</a> manually</li>
+      </ul>
+<p>&nbsp;</p>
+		<h3 id='before_start'><strong>Before you start</strong></h3>
+		<p>You might want to check out the <a href="http://www.kriesi.at/themes/Replete/template-files/video-tutorials/">demo video page</a>: We will update the site from time to time and add new videos on how to use the theme.</p>
+		<p><a href="http://www.kriesi.at/themes/Replete/template-files/video-tutorials/"></a></p>
+	 <!-- <p><strong>These  Videos Contain: </strong></p>
+		<ol>
+		  <li>
+		    Installation and using the auto importer
+		  </li>
+		  <li>Setting up the home and blog page and assigning a default layout </li>
+		  <li>Setting up a page, changing the layout and adding a slideshow with images and video</li>
+		  <li>Using shortcodes with the visual shortcode editor to enhance your post layout</li>
+		  <li>
+	      Building improved layouts with the template builder<br>
+	      </li>
+		  <li>Setting up the menu with the help of your menu manager</li>
+		  <li>
+	      Setting up the <a href="http://wordpress.org/extend/plugins/woocommerce/">woocommerce plugin</a> for shop functionallity<br>
+	      </li>
+      </ol>
+<p>&nbsp;</p>-->
+<hr/>
+<h3 id="installation"><strong>Installation</strong> - <a href="#toc">top</a></h3>
+		<p><br>
+	    You can either choose to upload the theme to your server via ftp (only upload the <strong>unzipped folder</strong> „Replete“ into the folder wp-content/themes/ ) or via WordPress upload function. to use the upload function of  the WordPress admin panel make sure to ONLY upload  the “<strong>Replete</strong>” folder and not the whole archive file that you received by themeforest. <a href="http://www.kriesi.at/themes/Replete/template-files/video-tutorials/#auto-install">Here is a short demo video on how its done</a></p>
+		<p><strong>Notice</strong>: if you are new to WordPress and have problems installing it you might want to check out this link: <a href="http://wiki.envato.com/buying/support-buying/solving-broken-theme-issues/">Solving broken theme issues</a><br>
+			After that is done activate the theme as you would activate any other theme at Appearance-&gt;Themes.<br>
+</p>
+		
+		
+		<p>If you are new to WordPress and have problems with setting up the theme you might want to import the dummy content file that comes with the theme. You can import this file by clicking the "Import dummy data" Button of the Replete Theme options. The theme will then import some dummy posts and pages from the live preview. However you will still need to set some options on your own, like which page should serve as front page or how menus should be displayed. A quick demonstration video can be found <a href="http://www.youtube.com/watch?v=tzb4BZwSH34">here</a>. (its really more a demonstration than a tutorial but it might be helpfull nevertheless. the video was recorded using the Brigtbox Theme but the options are the same for Replete since the themes share a framework)</p>
+		<p><strong>Shop functionallity</strong></p>
+		<p>To enable the ecommerce part of the theme download the woocommerce plugin <a href="http://wordpress.org/extend/plugins/woocommerce/">here</a>, then install and actiavte it like any other plugin. If you want to see how its done and how you can set up some products take a look at the <a href="http://www.screenr.com/uMZs">screencast here. (video shows a different theme but it works the same with Replete)</a></p>
+		<p>You can read the full documentation here: <a href="woocommerce.html">Woocommerce Documentation</a></p>
+		<p><strong>Forum functionallity</strong></p>
+		<p>To enable the forum functionaliy download the forum <a href="http://wordpress.org/extend/plugins/bbpress/">here</a>, then install and actiavte it like any other plugin. </p>
+<hr/>
+<h5 id="b1"><strong>Setting up the Theme Options  - <a href="#toc">top</a></strong></h5>
+
+
+
+<p>If you want to change the general Options of the Theme open the “Replete” Theme Options Panel (located in your admin sidebar) and click it, you will notice several tabs with options, which we will discuss now one by one.</p>
+<p><strong><img src="assets/images/screenshot 2011-03-06 um 18.46.31.png" width="612" height="91" class="bordergrey_leftttbottom">Front page &amp; Blog page</strong><br>
+  First of all you have to choose which content your front page should contain. You can either choose to display a page of your choice, or if you dont select a page the blog will be displayed. If you choose to select a page you can then pick another page that will display your blog instead of the default page content. If you want to make the front page look like the one in the theme demo make sure you select a page and then create a unqiue dynamic page template.</p>
+<p><strong><img src="assets/images/screenshot 2011-03-06 um 18.46.39.png" width="613" height="132" class="bordergrey_leftttbottom">Logo</strong><br>
+  Next you can choose to upload your own logo. Make sure that the logo has the correct dimensions. If you need to embed a logo of different size you might need to edit the CSS files directly. We will talk about CSS best practices for the theme in a second after we talked about the last input field on the Theme Options page:</p>
+<p><strong><img src="assets/images/screenshot 2011-03-06 um 18.46.49.png" width="617" height="170" class="bordergrey_leftttbottom">Google Analytics Tracking Code</strong><br>
+  Enter your Google analytics tracking Code here. It will automatically be  added to the themes footer so google can track your visitors behaviour.</p>
+<p>&nbsp;</p>
+<p><strong>Social Media Inputs</strong><br>
+ If you add your twitter account name, dribble accoutn name or the link to your Facebook page or profile a social icon will be displayed at the top of your page and at the footer for either of them. As for your worpdress feed: if you dont add anything to the url the default RSS feed will be applied automatically. If you got a feedburner RSS adress you can also enter it here. For example: http://feeds.feedburner.com/kriesi</p>
+<p>&nbsp;</p>
+<p><strong>Top Banner Message</strong><br> 
+  The banner message allows you to notify visitors of your site when something new has happened. If a visitor clicks the banner away it will no longer appear for that visitor until you change the message.
+</p>
+  
+  
+  
+  
+<hr/>
+<h5 id="b2"><strong>Setting up  Styling  - <a href="#toc">top</a></strong></h5>
+<p><strong><img src="assets/images/screenshot 2011-04-15 um 17.33.25.jpg" alt="" width="636" height="470" class="bordergrey_leftttbottom">Theme Colors:</strong><br>
+  With only a few different color inputs you can easily create new layouts in seconds. You just need to select a primary color for your links and as background color for footer and some other elements, as well as a font color for text placed on those elements.</p>
+<p>As you can see the theme generates the color scheme on the fly: In this example we have choosen a dark blue background and white text on that blue background. The white gets applied to the heading and for the text the theme generates a slightly &quot;darker&quot; by adding a little of the blue background.</p>
+<p>The theme comes with 21 predefined color schemes that can be used out of the box or modified if needed</p>
+<p><strong>Stretched or boxed layout</strong><br>
+The stretched layout expands from the left side of the viewport to the  right. The boxed layout will create a box around your content area that is approx. 1000px wide.</p>
+<p><strong>Heading Fonts</strong><br>
+  You can choose several fonts that will add a unique feeling to your site. The fonts you can choose are a selection of some of the google free web font archive and applied via css fontface.</p>
+<p><strong>Quick CSS</strong><br> 
+  If you want to do minor changes to the css you can enter them here and they will be added to the css. If you want to do major changes we recommend you to use the custom.css file.
+<br>
+</p>
+<hr/>
+<h5 id="layout"><strong>Setting up Layout &amp; settings  <a href="#toc">top</a></strong></h5>
+<p>&nbsp;</p>
+<p><strong>Default Blog Layout:</strong> The layout you choose here will be applied as the default blog layout. This means that by default all blog overview pages, blog entries and archives  will use this style. You can overwrite this setting for each post entry individually. When using the template manager you can also create seperate blogs that use another layout.</p>
+
+<p><strong>Default page Layout:</strong> The layout you choose here will be applied as the default for all pages. You can overwrite this setting for each page entry individually. When using the template manager you can also create pages that differ from any of those layouts.</p>
+<p><strong>Page Sidebar navigation:</strong> By default the theme creates a sidebar navigation if you are currently viewing a page that has any childs or siblings nested. You can deactivate those sidebars here if you dont want them displayed. If you choose to display them you can chane the order of the page items by changing their &quot;page order&quot; in the page edit screen.</p>
+<p><strong>Slideshow behavior on overview pages:
+</strong>This settings affects post, age and portfolio entries which have more than one preview image applied. The default setting is: overview pages (eg Blog, Portfolio Overview) display the whole slideshow for each post.You can change this so that overview pages always only display a single image. Only single entries will then show the whole slideshow. </p>
+<hr/>
+<h5 id="b12"><strong>Setting up your footer <a href="#toc">top</a></strong></h5>
+<p>To set up your footer you need to select how many columns it should be displayed. Once that is done head over to the themes widget page (appearance-> widgets) and add widgets to the footer widget areas displayed here. The default widgets that are displayed in your footer will be removed once you apply any other widgets :)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<hr/>
+<h5 id="b4"><strong>Setting up the general Portfolio options- <a href="#toc">top</a></strong></h5>
+<p><img src="assets/images/screenshot 2011-03-06 um 18.48.53.png" width="617" height="152" class="bordergrey_leftttbottom">The first task when setting up your portfolio is to set the URI scheme for your portfolio single entries. The default is set to &quot;portfolio&quot; so for example if you create a new portfolio entry that should show your latest artwork WordPress will display the url as http://yourDomain.com/portfolio/latest-artwork.</p>
+<p>It is quite important to understand that you need to take care that the slug entered here does not interfere with other category slugs, otherwise WordPress will not be able to find your portfolio entries and simply display a 404 page. Sounds probably a little complicated but as a rule of thumb, if you just make sure that you got no post-category or page with the same name as the slug set here, no problems should occur.</p>
+<p><strong><img src="assets/images/screenshot 2011-03-06 um 18.49.09.png" width="634" height="303" class="bordergrey_leftttbottom">Creating a portfolio page</strong><br>
+  Creating 
+  a portfolio page requires several steps. First of all you need to create a few single entries that contain whatever you want to show to the world :) This is easily done by clicking the &quot;Portfolio Items&quot; link in your admin sidebar and start creating new entries just as you would create new blog posts. Add Images, add categories and if you are done return to the Replete-&gt;Portfolio settings.</p>
+<p>Now you need to set the two most important options: <br>
+  First of all which portfolio posts do you want to show on your portfolio page? SImply select the categories that hold the posts in the select box.<br>
+  Then we need a page to display those items. Select this page from the dropdown menu and you are done. If you no save the options and head over to this page it should act as an overview page for your portfolio. The default page content wil be shown in the small sidebar beside your portfolio entries.</p>
+<p><strong><img src="assets/images/screenshot 2011-04-15 um 17.41.57.jpg" alt="" width="572" height="371" class="bordergrey_leftttbottom"></strong>Once that is done choose which kind of portfolio you want to display:</p>
+<p>You can select 1, colum, 2,3 and 4 column porfolios, as well of some variations with sidebars. You can also select how many portfolio entries to display on your portfolio page and if you want to show the portfolio excpert and the pagination</p>
+<p>Not visible in this screen is the sorting option which also can be hidden.<br>
+  <br>
+  By clicking the [+] and [-] icons at the bottom right of the page you can create an unlimited amount of portfolio pages that contain different workpieces, based on the categories you select.</p>
+  
+<hr/>
+
+<h5 id="b5"><strong> Setting up the Contact form  - <a href="#toc">top</a></strong></h5>
+<p>Setting up contact form  is a rather quick task: just select the page that should display the contact form and also select the email address that should receive the mails.</p>
+<p>You can also set an autoresponder that wil be sent to the user once he has sent you a message. You can edit the existing contact form to your likings but it is recommended to at least keep the name, email and subject field.
+</p>
+<hr/>
+<h5 id="b6"><strong>Setting up the Sidebar  - <a href="#toc">top</a></strong></h5>
+
+
+<p><strong><img src="assets/images/screenshot 2011-03-06 um 18.49.43.png" width="571" height="309" class="bordergrey_leftttbottom"></strong><img src="assets/images/Bild 7-1.jpg" width="204" height="277" class="bordergrey_leftttbottom">Next step is to select those categories and pages that should get a unique set of sidebars. For every category or page choosen here the theme will add a new Sidebar Widget area at appearance/widgets. Once you have choosen the pages and categories press save and head over to the widget section of WordPress.</p>
+<p>You will see that the new areas just got appended to the predefined ones.<br>
+	So adding these areas is easy. </p>
+<p>However be very careful when removing widget areas that  already got widgets applied to them.<br>
+	WordPress doesn't remember where it stores widgets by name, it stores this information by number. So if I would add a text widget to Contact  (widgetarea Nr6 in the screenshot), and then delete the Contact widget area, the widgets would then be in Jobs. (previously in 7, now the new 6)</p>
+
+
+
+
+
+<hr/>
+<h5 id="b7"><strong> Setting up the Menus on your site  - <a href="#toc">top</a></strong></h5>
+<p>The Theme  improves the WordPress 3.0 menu items with a few additional options that make it possible to create subheadings for the main menu items. To do this just enter some text into the menus description field. If you have problems pulling that off: here is a short <a href="http://www.kriesi.at/themes/Replete/template-files/video-tutorials/#menu">demonstration on how its done</a> (Replete theme, works the same way in Replete)</p>
+<p>The theme offers 2 menu locations: the Main menu location beside your logo and a very small submenu location at the top of your page, right above your logo. Once you have created a menu you then have to select where to display it. Please keep in mind that the small menu location above your logo doesnt support dropdown menus or mega menus.</p>
+<p>You can also create additional menus and display them within your sidebar by adding the menu widget to one of your sidebars</p>
+
+
+
+
+
+
+<hr/>
+
+
+<h5 id="b8"><strong>Using custom Widgets</strong>  - <a href="#toc">top</a></h5>
+<p>The Theme comes with several custom widgets that let you display latest blog posts, latest portfolio entries or your latest tweets either in your sidebar or if used in conjunction with <a href='#b10'>shortcodes</a> also within your content area. It also has a combo widget with 4 tabs taht includes latest comments, latest entries, most popular entries and post tags, as well as an advertising widget, and a social media count widget.</p>
+
+<p>The options are pretty much self explaining, the widgets are named "Replete Latest News", "Replete Latest Portfolio" and "Replete Twitter Widget" </p>
+<p><img src="assets/images/screenshot 2011-03-29 um 01.09.08.jpg" alt="" width="549" height="355" class="bordergrey_leftttbottom">The only widget which might need a little bit of explanation is the social media count widget: it displays the number of twitter follower as well as the number of your rss feed subscribers in the sidebar. The feed subscribers can only be shown if you enter a valid feedburner feed url (this will not work with your default wordpress feed url) Also make sure that the awarness API of your feedburner account is active, otherwise your wordpress installation will not be able to access your feed data.</p>
+<p>&nbsp;</p>
+
+
+
+
+
+<hr/>
+
+
+<h5 id="b9"><strong>Adding Content (how to create gallery entry and preview images)  -</strong>  - <a href="#toc">top</a></h5>
+
+
+<p>Writing a post or page  doesn't really differ from doing so when using other themes. You add a title, add some content, and categories and thats about it. In Replete you need to do a few more things:</p>
+
+<p>If you want to create a blog or page entry you got the possibility to add either a single featured image or multiple images that get converted to a slideshow. </p>
+<p> When writing the post, scroll down; bellow the text-area you will notice a few extra fields: First you can choose which slideshow type you want to use and if autorotation for this post should be active. Once that is done you can add one or multiple Images and also set diffferent settings for each slide depending on which slideshow you have chosen.</p>
+<p>First of all just click the upload button and add upload your image to your web-server. Click the "Add to slideshow" button and a thumbnail will be inserted. You then can add a caption title and a caption text if you want to. More advanced users can also set the caption position, color and styling. When uploading a picture all different thumbnail sizes needed for the theme are generated by WordPress. However this only happens if you add new pictures. if you are using pictures that were already uploaded before the Replete theme was activated, WordPress cannot resize them. Keep that in mind when working with images that were uploaded before the theme was active :)</p>
+<p>If you have selected the adaptavia slider instead of the fade or moving slider you can also set the slideshow transition for each slide.</p>
+<p><img src="assets/images/screenshot 2011-12-18 at 17.11.08.jpg" width="675" height="632"></p>
+<p><strong>Using Video:<br>
+</strong>When working with the image slider you can also choose to display video content instead of images. this works very similar.<br>
+FIrst hit the add external video by URL button. Enter the url to the video service that hosts the video. A service like vimeo or youtube for example.<br>
+A list of all supported Video Services can be found <a href="http://codex.wordpress.org/Embeds#Okay.2C_So_What_Sites_Can_I_Embed_From.3F" target="_blank">here</a> </p>
+<p>Once that is done press the &quot;insert Video&quot; button and the video will be embeded in the slideshow. If you want to display a poster image for the video simply click the blank film reel that you can see on default when adding a video.
+</p>
+<p><strong>Using Post Formats</strong></p>
+<p><strong>Post Formats</strong> is a <a href="http://codex.wordpress.org/Theme_Features" title="Theme Features">theme feature</a> introduced with <a href="http://codex.wordpress.org/Version_3.1" title="Version 3.1">Version 3.1</a>. A Post Format is a piece of meta information that can be used by a theme to customize its presentation of a post. The theme supports 4 different formats. The standard format is for deault blog entries. The link format is for linked entries to external sites. If you select the link format make sure that your post has a title and that the first line in the content textarea is a link.</p>
+<p>If you select &quot;Quote&quot; the post title will be transformed to a bold quote. The gallery post type doesn't really differ from the standard post type. The only difference is that image in standard format are cropped so they always have the exact same height and width which is not the case with galleries.</p>
+<p><img src="assets/images/screenshot 2011-12-18 at 17.11.25.jpg" alt="" width="296" height="139"></p>
+<hr/>
+
+
+
+
+
+
+<span id="b10"><strong>Using shortcodes - <a href="#toc">top</a></strong></span>
+
+<p>What is a shortcode and how do i use it? <br>
+Shortcodes are small text snippets that get converted by WordPress. As an example:</p>
+<p>Using shortcodes is very easy. To use one, create a new post (or edit an existing one), and in the the editor type a shortcode in brackets, such as:</p>
+<pre>
+[quote]This is a pull-quote.[/quote] 
+</pre>
+<p>to generate a pull-quote. Other example would be the use of shortcodes to create columns within your post:
+<pre>[one_half first]Content here.[/one_half] [one_half]Content here.[/one_half] </pre>
+<pre>[one_third first]Content here.[/one_third] [one_third]Content here.[/one_third] [one_third]Content here.[/one_third] </pre>
+<pre>[one_fourth first]Content[/one_fourth] [one_fourth]Content[/one_fourth] [one_fourth]Content[/one_fourth] [one_fourth]Content[/one_fourth] </pre>
+<pre>[one_fourth first]Content here.[/one_fourth] [three_fourth]Content here.[/three_fourth]</pre>
+<pre>[one_third first]Content here.[/one_third] [two_third]Content here.[/two_third]</pre>
+
+
+<br/>
+<img src="assets/images/screenshot 2011-03-06 um 21.21.35.png" width="300" height="272" class="bordergrey_leftttbottom">The theme comes with quite a few shortcodes that are easily accessible thanks to a visual self-explanatory user interface that is accessible by clicking the magic wand button when you write a post
+</p>
+
+<p>Most shortcodes require you to enter additional information and then get generated by the theme on its own, starting from columns to content slider. You can also choose to nest various shortcodes. For example create 3 columns, and within each of them display a small slideshow. Or do it the other way round: create a single slideshow that slides multiple columns. The sky is the limit :)</p>
+<p><strong><a href="http://www.kriesi.at/themes/Replete/template-files/video-tutorials/#shortcodes">DEMO VIDEO</a></strong></p>
+
+
+
+<p><strong>Attention:</strong> Please make sure to always start new shortcodes on new lines. Most of the time you wont encounter any errors if you don't do that but unfortunately WordPress does mess up the html sometimes. This is true for all shortcodes but the inline ones like drop-caps buttons and icon links, those are the only ones that don't need a new paragraph. </p>
+<p>
+In case you encounter odd behavior always make sure that all shortcodes are closed as expected. Also when trying to nest shortcodes please be aware that you cant wrap a shortcode with the same name around another one with that name:
+
+For example: [one_third first] [one_third first]Content here.[/one_third] [/one_third] would result in messed up html code since WordPress is not able to identify which opening tag belongs to which close tag. However what you can do is nest shortcodes within each other if they don't share a name. for example you could easily place a slideshow within a 3rd column tag. Just make sure to add new paragraphs between them ;)
+</p>
+
+<p>Icon Box shortcodes: The theme comes with iconbox shortocdes (see at the bottom of <a href='http://www.kriesi.at/themes/Replete/template-files/shortcodes/'>this page</a>). The Icons used are from the iconset <a href='http://www.iconsweets2.com/'>"Iconsweets2"</a> which has a lot more icons then we used. if you want to add some of them, or any other just upload your icons to the image/icons/iconbox/ folder. Once that is done, they will appear in the dropdown box of the visual shortcode generator if you create a new iconbox</p>
+
+
+
+
+<hr/>
+
+<span id="template_builder"><strong>Building your own dynamic Templates - <a href="#toc">top</a></strong></span>
+
+<p>Probably the best way to create stunning and complex pages is the Wordpress Template Builder that comes with the theme. Allthough you can of course choose to edit template files the old fashioned way, (by editing them in your HTML editor of choice) the dynamic template generator is a much more flexible solution. So how does that editor work? Before reading the how to you might want to check this <a href="http://www.youtube.com/watch?v=CR_m-d3m4g4&feature=related">short demo video </a>which already describes a little how it is done.</p>
+<p>&nbsp;</p>
+<p><img src="assets/images/screenshot 2011-04-15 um 20.13.53.jpg" alt="" width="490" height="136" class="bordergrey_leftttbottom">First of all open the editor at Replete-&gt; Template Builder. You then get asked to enter a name for your new dynamic template. Do so by entering one without any special characters and at least 3 chars long. Hit the &quot;Create Template&quot; button and a blank default template is created.</p>
+<p>&nbsp;</p>
+<p><img src="assets/images/screenshot 2011-09-09 um 18.30.46.jpg" width="286" height="369" class="bordergrey_leftttbottom">It doesnt contain any elements yet but we will add some in a second, first lets apply the template to a post, page or portfolio entry of your choice. Simply open the entry you want the template to be applied to and look out for the &quot;Page or Post Layout&quot; Sidebar. Here you need to overwrite the default layout with the option &quot;dynamic template&quot; Then can now select the template you have just created.</p>
+<p>Once selected save the entry. If you look at it in the frontend now it should simply display a blank content area.</p>
+<p>To change that we need to start elements to the dynamic template. So head back to the new Dynamic Template you just created and start adding elements. Once an element is added you can easily change the position via drag and drop. To make it as easy as possible we tried to reduce the elements available to the absolute necessary minmum. We ended up with7 &quot;modules&quot;:</p>
+<p><strong>Horizontal Ruler</strong><br>
+adds a horizontal ruler to the page to seperate content. Choose between several styles to fit your needs</p>
+<p><strong>Simple Text area</strong><br>
+adds text to your page. This module is most often used to create a nice looking quote but you can also jsut fill in any html or even shortcodes to displaywhatever content you want. It is also used to create a callout section with buttons</p>
+<p><strong>Slideshow</strong><br>
+adds the slideshow of the entry the template gets applied to. This way if you apply the template to different posts and pages it will still display the featured images of each individual entry. Uses the slideshow settings defined in the post or page.</p>
+<p><strong>Post/Page Content</strong><br> 
+  This module behaves similar to the slidehsow: it will by default output the content of the entry the template got applied to. You can also choose to display a different post or page. If you choose to display a different post or page the content of that entry will be displayed instead. If the entry you have choosen is cut by the wordpress &quot;<a href="http://www.orangecaster.com/social-media/2009/10/how-to-use-the-wordpress-read-more-feature/">read more</a>&quot; tag the module will output only the part before the read more tag and add a read more button.</p>
+<p><strong>Blog</strong><br>
+adds a blog with sidebar to the template. You can choose which categories should be displayed, as well as how many entries and if a pagination should be displayed as well.</p>
+<p><strong>Portfolio</strong><br>
+adds a portfolio to your page. You got the same options as in your <a href="#b4">portfolio section</a>, only with the advantage that you can combine this portfolio with other modules to create unique portfolio pages.</p>
+<p><strong>Columns</strong><br>
+adds one row with either 2,3 or 4Columns to the Page. You can choose the width for each column as well as the content. The available options are:</p>
+<p><strong>Page</strong>: add page content of a single page<br>
+  <strong>Post</strong>: add the latest post from a category. 
+if you choose the same category a second, third, fourth or fifth time in another column the offset will be generated automatically so that you dont display the same post twice<br>
+<strong>Widget:</strong> Enter the name of a widget. the widget can then be used at appearance &gt; widgets. Please be carefull when deleting widgets since the contents of a widget is stored by widget number and not by name. You can read more about it <a href="#b6">here.</a><br>
+<strong>Text:</strong>Add some text. html and wordpress shortcodes are allowed.<br>
+</p>
+<p>Attention: Since the Template Manager makes heavy use of Javascript it is recommended to use a modern browser, like IE9+, Firefox4+, Safari or Chrome. It will still work with older browsers but you will notice dropping  performance if you add many templates.</p>
+
+<hr/>
+
+<h3 id="htmlStructure"><strong>HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>The Theme uses valid HTML 5 and comes with predefined classes for common elements needed in web design.<br/>
+
+All templates share basic elements like header, footer, main, and entry so be carefull when editing those or adding/changing the CSS for those ids and classes :)</p>
+
+<hr/>
+<h3 id="cssFiles"><strong>CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>The CSS for the theme is split into various files: one that holds the basic markup for layout which is called style.css. We then got one file for the light and the dark sin in your css folder, as well as a shortcode css file. Last but not least we got an empty custom.css file which should be used by you to add your own modifications. Since we never touch the custom.css file when making updates you can easily update to later theme versions without beeing in danger of loosing stylesheet modifications.
+      </p>
+
+
+		
+<hr/>
+<h3 id="javascript"><strong>JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>The theme uses advanced jQuery functions. You do not need to know how to use jQuery to activate them, almost everything is controlled by WordPress. All the function calls as well as as the custom created jQuery plugins like the slideshows are located in the avia.js file.<br>
+		<p><strong> Lightbox: a custom pretty photo skin</strong></p>
+		<p>the lightbox gets automatically applied to links that contain images, youtube videos, vimeo videos, mov files and swf files. if you don't want to activate the lightbox on any of those links add the class 'noLightbox'. if you manually want to apply the lightbox to a link you can add the rel='lightbox' attribute to the &lt;a&gt; tag.<br>
+		</p>
+		<p>Better documentation can be found here:<br>
+		<a href="http://www.no-margin-for-errors.com/projects/prettyPhoto-jquery-lightbox-clone/">http://www.no-margin-for-errors.com/projects/prettyPhoto-jquery-lightbox-clone/</a></p>
+
+<hr/>
+<h3 id="psdFiles"><strong>PSD Files</strong> - <a href="#toc">top</a>		</h3>
+		<p>Among with the theme come all psd files needed to edit the different skins. With these psds you can even create your own unique Replete skin.		</p>
+<hr/>
+<h3 id="imagesize"><strong>Image Sizes- <a href="#toc">top</a></strong></h3>
+	  <p>This is the image array used in functions.php to tell wordpress which image sizes to use. The preview images for dynamic templates at the bottom can be delted if you dont want to use dynamic template files of that size. that will save some performance while uploading and also some webspace on your server.</p>
+	  <p><br>
+	    $avia_config['imgSize']['widget'] 			 	= array('width'=&gt;36,  'height'=&gt;36 );						// small preview pics eg sidebar news<br>
+	    $avia_config['imgSize']['post-format-image'] 	= array('width'=&gt;630, 'height'=&gt;999, 'crop'=&gt;false);		// big images for post format image and gallery posts<br>
+	    $avia_config['imgSize']['fullsize'] 		 	= array('width'=&gt;930, 'height'=&gt;930, 'crop'=&gt;false);		// big images for lightbox and portfolio single entries<br>
+	    $avia_config['imgSize']['featured'] 		 	= array('width'=&gt;930, 'height'=&gt;340);						// images for fullsize pages and fullsize slider<br>
+      $avia_config['imgSize']['portfolio'] 		 	= array('width'=&gt;450, 'height'=&gt;335);						// images for portfolio entries (2,3,4 column)</p>
+	  <p>//dynamic columns<br>
+	    $avia_config['imgSize']['dynamic_1'] 		 	= array('width'=&gt;446, 'height'=&gt;151);						// images for 2/4 (aka 1/2) dynamic portfolio columns when using 3 columns<br>
+	    $avia_config['imgSize']['dynamic_2'] 		 	= array('width'=&gt;609, 'height'=&gt;210);						// images for 2/3 dynamic portfolio columns<br>
+	    $avia_config['imgSize']['dynamic_3'] 		 	= array('width'=&gt;688, 'height'=&gt;151);						// images for 3/4 dynamic portfolio columns</p>
+<p>you can change these settings in functions.php. the theme will then create different thumbnail sizes according to your changes on upload. You might need to reflect those changes within your CSS file, depending on what you have changed ;)</p>
+<hr/>
+<h3 id="credits"><strong>G) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+<ul>
+<li>  <A HREF="http://www.no-margin-for-errors.com/projects/prettyPhoto-jquery-lightbox-clone/" align="LEFT">lightbox plugin</A></li>
+<li><a href='http://www.iconsweets2.com/'>Portions of Iconsweets2 Icon set</a></li>
+<li>Portions of Iconset Discovery</li>
+<li><a href="http://www.tutorial9.net/downloads/free-icon-pack-web-injection/">Portions of Web Injection Icon Set</a></li>
+<li>flickr creative commons products shots by following users: janne, jeff golden, julie froo, kakissel, linux-works, Monsieur Gordon, martiniko, luca 76, Gnilenkov Aleksey, Vicchi, Ashok666</li>
+<li>flickr creative commons library pictures by: codyR, kretyen, mescon, obskura, freya23, amir K, Tambako the Jaguar, jaeWalk</li>
+<li>Images by creattica &amp; psdtuts+: All images are copyrighted to their respective owners and not available for download with this theme.</li>
+</ul>
+<hr/>
+<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Kriesi</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+      </p></div>
+</div><!-- end div .container -->
+</body>
+</html>
